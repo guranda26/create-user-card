@@ -81,6 +81,7 @@ const ProfilePage: React.FC = () => {
               className="form-control profile-input"
               value={userInfo.name}
               onChange={handleNameChange}
+              required
             />
           </div>
           <div className="mb-3">
@@ -92,6 +93,7 @@ const ProfilePage: React.FC = () => {
               className="form-control profile-input"
               value={userInfo.surname}
               onChange={handleSurnameChange}
+              required
             />
           </div>
           <div className="mb-3">
@@ -104,6 +106,7 @@ const ProfilePage: React.FC = () => {
               className="form-control profile-input"
               value={userInfo.role}
               onChange={handleRoleChange}
+              required
             />
           </div>
           <div className="mb-3">
