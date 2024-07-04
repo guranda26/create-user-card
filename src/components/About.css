@@ -1,0 +1,18 @@
+.about-me {
+  margin-top: auto;
+  background: #f098f018;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #0000001a;
+  width: 50%;
+}
+
+.about-me h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about-me p {
+  color: #555;
+  line-height: 1.6;
+}

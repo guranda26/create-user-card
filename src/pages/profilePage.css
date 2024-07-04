@@ -1,0 +1,14 @@
+.profile-container {
+  background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+  background-size: contain;
+}
+.profile-form {
+  max-width: 600px;
+  margin: auto;
+}
+
+.profile-input {
+  padding: 0.75rem; 
+  background-color: #f0f0f0; 
+  border: 1px solid #ccc; 
+}
