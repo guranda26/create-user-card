@@ -1,7 +1,7 @@
 .user-profile-img {
-  width: 200px; 
-  height: 200px; 
-  object-fit: cover; 
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -40,4 +40,8 @@
 
 .author {
   font-family: "Pacifico", cursive;
+}
+
+.btn {
+  border: none !important;
 }
