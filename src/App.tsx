@@ -8,13 +8,27 @@ import Reviews from "./components/Reviews";
 import ProfilePage from "./pages/profilePage";
 import Header from "./components/Header";
 import ErrorPage from "./pages/errorPage";
+import { useTheme } from "./context/ThemeContext";
+import ThemeSettings from "./components/ThemeSettings";
+import "./App.css";
 
 const App: React.FC = () => {
+  const { backgroundColor, backgroundImage } = useTheme();
+
+  const appStyle = {
+    backgroundColor,
+    backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
+    backgroundSize: backgroundImage ? "cover" : undefined,
+    backgroundPosition: backgroundImage ? "center" : undefined,
+  };
+
   return (
-    <div className="app-container">
+    <div className="app-container" style={appStyle}>
       <Header />
       <main>
-        <div className="sidebar"></div>
+        <div className="sidebar container">
+          <ThemeSettings />
+        </div>
         <div className="content">
           <Routes>
             <Route path="/" element={<UserCard />} />

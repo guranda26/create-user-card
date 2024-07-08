@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faInstagram,
   faFacebook,
@@ -11,6 +10,7 @@ import { useSelector } from "react-redux";
 import { UserInfo, selectUser } from "../state/user/userSlice";
 import profileImage from "../assets/images/user-image.jpeg";
 import "./Card.css";
+import Icon from "./Icon";
 
 const UserCard: React.FC = () => {
   const userInfo = useSelector(selectUser);
@@ -57,25 +57,25 @@ const UserCard: React.FC = () => {
               onClick={() => handleSocialNetworkClick("instagram")}
               className="btn btn-lg m-1 btn-primary"
             >
-              <FontAwesomeIcon icon={faInstagram} />
+              <Icon icon={faInstagram} />
             </button>
             <button
               onClick={() => handleSocialNetworkClick("facebook")}
               className="btn btn-primary btn-lg m-1"
             >
-              <FontAwesomeIcon icon={faFacebook} />
+              <Icon icon={faFacebook} />
             </button>
             <button
               onClick={() => handleSocialNetworkClick("twitter")}
               className="btn btn-primary btn-lg m-1"
             >
-              <FontAwesomeIcon icon={faTwitter} />
+              <Icon icon={faTwitter} />
             </button>
             <button
               onClick={() => handleSocialNetworkClick("linkedin")}
               className="btn btn-primary btn-lg m-1"
             >
-              <FontAwesomeIcon icon={faLinkedin} />
+              <Icon icon={faLinkedin} />
             </button>
           </div>
 

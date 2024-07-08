@@ -23,8 +23,10 @@ import {
   faUser,
   faUserTie,
 } from "@fortawesome/free-solid-svg-icons";
+import { useTheme } from "../context/ThemeContext";
 
 const ProfilePage: React.FC = () => {
+  const { buttonColor } = useTheme();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const userInfo = useSelector(selectUser);
@@ -98,8 +100,7 @@ const ProfilePage: React.FC = () => {
           </div>
           <div className="mb-3">
             <label className="form-label">
-              <Icon icon={faUserTie} />
-              Role:
+              <Icon icon={faUserTie} /> Role:
             </label>
             <input
               type="text"
@@ -172,7 +173,11 @@ const ProfilePage: React.FC = () => {
               }
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button
+            type="submit"
+            className="btn btn-primary"
+            style={{ backgroundColor: buttonColor }}
+          >
             Update
           </button>
         </form>
